@@ -1,14 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import WebFont from 'webfontloader';
+
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
+
+const rootElement = document.getElementById('root')
+WebFont.load({
+  google: {
+    families: ['Droid Sans', 'Chilanka', 'Oswald']
+  }
+});
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+    <App />,
+  rootElement
 );
 
 // If you want to start measuring performance in your app, pass a function
